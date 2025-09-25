@@ -7,10 +7,11 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    <h1>This is my Blog website</h1>
     <header>
-        <h2>My Blog</h2>
-        <a  href="/home">Home</a>
-        <a  href="/about">About</a>
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
     </header>
 
     <main>
@@ -18,7 +19,7 @@
     </main>
 
     <footer>
-        <p>&copy; {{ date('Y') }} My Blog</p>
+          <p>&copy; {{ date('Y') }} My Blog</p>
     </footer>
 </body>
 </html>
