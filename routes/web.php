@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -79,3 +80,9 @@ Route::prefix('admin')->group(function () {
 Route::get('/home', [PageController::class, 'home']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact',[PageController::class,'contact']);
+
+
+
+// Day 4 Work Make Crud with Resource 
+
+Route::resource('/posts',PostController::class);
