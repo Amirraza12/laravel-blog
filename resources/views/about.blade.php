@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About</title>
-</head>
-<body>
-        <h3>Welcome to About Page</h3>
-        <p>My name is {{$name}}</p>
-</body>
-</html>
+
+@extends('layouts.app')
+
+@section('title', 'About Us')
+    
+@section('content')
+    <h1>Welcome to About Page</h1>
+    <p>This is laravel about page using layout</p>
+@endsection

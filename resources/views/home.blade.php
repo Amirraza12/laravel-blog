@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-<body>
-    <h3>Welcome To Home Page</h3>
-    <p>This is Laravel Home Page</p>
-</body>
-</html>
+@extends('layouts.app')
+
+@section('title','Home Page')
+
+@section('content')
+    <h2>Welcome to Home Page</h2>
+    <p>This is Laravel home page using layout.</p>
+    
+@endsection
