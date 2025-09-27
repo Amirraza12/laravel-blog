@@ -24,6 +24,14 @@
                         <td>{{ $post->id}}</td>
                         <td>{{ $post->title}}</td>
                         <td>{{ $post->content}}</td>
+                        <td>
+                            <a href="{{route('posts.edit',$post->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                            <form action="{{route('posts.destroy',$post->id)}}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are your sure ?');">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
 

@@ -48,24 +48,32 @@ class PostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Post $post)
     {
-        //
+        return view('posts.edit',compact('post'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Post $post)
+
     {
-        //
+        $request->validate([
+            'title'=> 'required|min:3',
+            'content'=> 'required|min:10'
+        ]);
+        $post->update($request->all());
+        return redirect()->route('posts.index')->with('success','Post Updated Successfully');    
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('posts.index')->with('success','Post Deleted Successfully');
     }
+    
 }
